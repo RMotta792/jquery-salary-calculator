@@ -7,14 +7,34 @@ Create an application that records employee salaries and adds salaries up to rep
 
 ## Assignment
 
-The application should have an input form 
-    that collects _employee first name, 
-        last name, 
-            ID number, 
-                job title, 
-                    annual salary_.
+x-Create Table
+x-The application should have an input form 
+    x-that collects _employee first name, 
+       x- last name, 
+          x-  ID number, 
+              x-  job title, 
+                   x- annual salary_.
 
-A 'Submit' button should collect the form information, 
+ x Created input fields
+    x first name
+    x last name
+    x id
+    x job title
+    x annual salary
+
+x Created submit button
+
+x Created table
+
+ x-A 'Submit' button should collect the form information, 
+    x-grab individual values
+      x-  bundle
+         x-   append to table
+                
+
+
+----------------------------------
+
     store the information to calculate monthly costs, 
         append information to the DOM and clear the input fields. 
             Using the stored information, calculate monthly costs and append this to the to DOM. 
