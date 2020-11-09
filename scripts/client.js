@@ -10,7 +10,7 @@ function onReady(){
     // Target button, give it onClick functionality
     $('.employeeSubmit').on('click', submitClick);
     
-    
+    $('.delete-btn').on('click', 'tr', deleteEmployee);
 }
 
 function submitClick(){
