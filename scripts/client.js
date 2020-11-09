@@ -38,31 +38,40 @@ function submitClick(){
             <td>${emTitle}</td>
             <td>${emSalary}</td>
             <td>
-                <button>
+                <button class="delete-btn">
                     Delete
                 </button>
             </td>
         </tr>`);
 
     event.preventDefault();
+    addMonthlySalary();
 }
 
-// function deleteEmployee(event){
-//     console.log('Delete employee clicked');
-    
-//     let containRow = $(this)parent();
 
-// }
+function deleteEmployee(event){
+    console.log('Delete employee clicked');
+    
+    let containRow = $(this).parent();
+
+    allEmployees.splice(containRow.data('deletingID', 1));
+    $(this).closest('tr').remove();
+
+    addMonthlySalary();
+}
+
 
 function addMonthlySalary(){
+
     salaryMonthly = 0;
     let salaryTotal = 0;
-
-    for (let i=0; i< allEmployees.length; i++){
+    for (let i = 0; i < allEmployees.length; i++){
         let employee = allEmployees[i];
-        salaryTotal += parseInt(employee.salary);
+        salaryTotal += parseInt(employee.annuSalary);
     }
 
-    
+    salaryMonthly = salaryTotal / 12;
+
+    $('#salary-monthly').append('<p>Total Monthly Cost: <p>', salaryMonthly);
 }
 
