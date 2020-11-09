@@ -2,6 +2,8 @@ console.log('JS');
 
 $(document).ready(onReady);
 
+let allEmployees = [];
+
 function onReady(){
     console.log('Hello from JQ');
     
@@ -43,5 +45,24 @@ function submitClick(){
         </tr>`);
 
     event.preventDefault();
+}
+
+// function deleteEmployee(event){
+//     console.log('Delete employee clicked');
+    
+//     let containRow = $(this)parent();
+
+// }
+
+function addMonthlySalary(){
+    salaryMonthly = 0;
+    let salaryTotal = 0;
+
+    for (let i=0; i< allEmployees.length; i++){
+        let employee = allEmployees[i];
+        salaryTotal += parseInt(employee.salary);
+    }
+
+    
 }
 
